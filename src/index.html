@@ -7,11 +7,359 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <title>Garnier Vit C Krem pod oczy</title>
+    <title>Travel Template</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="splide.min.css" />
+    <script src="index.js" type="module"></script>
   </head>
-  <body></body>
+  <body class="bg-white font-roboto">
+    <!-- _____________________________________________________________ header _____________________________________________________________ -->
+
+    <header
+      class="relative h-screen place-items-center bg-[url(img/1-hero-xs.jpg)] bg-cover bg-right-bottom bg-no-repeat pb-4 pt-[30%] sm:bg-[url(img/1-hero-sm.jpg)] md:grid md:aspect-[1600/950] md:h-auto md:bg-[url(img/1-hero-md.jpg)] md:pt-0 lg:bg-[url(img/1-hero-lg.jpg)] xl:bg-[url(img/1-hero.jpg)]"
+    >
+      <nav
+        class="absolute left-0 top-0 z-10 flex w-full items-center justify-between gap-2 bg-white text-sm text-gray-600 md:flex-row lg:gap-4 lg:px-[8%]"
+      >
+        <!-- _________ logo _________ -->
+        <p
+          class="bg-gradient-blue-to-purple ml-4 w-fit bg-clip-text text-xl font-bold text-transparent md:mt-0"
+        >
+          TRAVEL
+        </p>
+        <button
+          id="menu-toggle"
+          type="button"
+          aria-controls="menu-items"
+          aria-expanded="false"
+          aria-label="toggle navigation"
+          class="relative h-[10px] w-4 md:hidden"
+        >
+          <span class="absolute top-0 block h-[2px] w-4 bg-neutral-700"></span>
+          <span class="absolute top-1 block h-[2px] w-4 bg-neutral-700"></span>
+          <span class="absolute top-2 block h-[2px] w-4 bg-neutral-700"></span>
+        </button>
+        <ul id="menu-items" class="hidden text-center md:flex">
+          <li class="px-2 py-4 hover:bg-bluec hover:text-white lg:px-4">
+            <a href="#">Home</a>
+          </li>
+          <li class="px-2 py-4 hover:bg-bluec hover:text-white lg:px-4">
+            <a href="#">About</a> Us
+          </li>
+          <li class="px-2 py-4 hover:bg-bluec hover:text-white lg:px-4">
+            <a href="#">Services</a>
+          </li>
+          <li class="px-2 py-4 hover:bg-bluec hover:text-white lg:px-4">
+            <a href="#">Portfolio</a>
+          </li>
+          <li class="px-2 py-4 hover:bg-bluec hover:text-white lg:px-4">
+            <a href="#">Blog</a>
+          </li>
+          <li class="px-2 py-4 hover:bg-bluec hover:text-white lg:px-4">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <div
+          class="bg-gradient-blue-to-purple flex items-center gap-2 p-4 text-white md:self-stretch"
+        >
+          <svg class="w-5 fill-white" viewBox="0 0 512 512">
+            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              id="phone"
+              d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+            />
+          </svg>
+          <a href="tel:85151595959"> +Call us: 85151595959 </a>
+        </div>
+      </nav>
+
+      <div
+        class="bg-gradient-blue-to-purple mx-auto w-3/4 p-8 text-center text-white opacity-80 lg:w-1/2 lg:p-12"
+      >
+        <h1 class="mb-4 text-4xl lg:mb-6 lg:text-6xl">
+          <strong>Travel </strong>Template
+        </h1>
+
+        <p class="mb-2 font-bold lg:mb-4 lg:text-xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur.
+        </p>
+        <p class="text-xs lg:text-sm">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore?
+          <strong>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique
+            non asperiores reprehenderit!
+          </strong>
+        </p>
+      </div>
+      <form
+        action="#"
+        class="bg-gradient-blue-to-purple absolute bottom-4 left-1/2 grid w-3/4 -translate-x-1/2 gap-4 px-4 py-4 opacity-80 md:bottom-0 md:w-5/6 md:translate-y-1/2 md:grid-cols-2 md:py-12 md:opacity-100 lg:grid-cols-4"
+      >
+        <input
+          class="border border-bluec p-2"
+          placeholder="Your location"
+          type="text"
+        />
+        <input class="border border-bluec p-2" placeholder="From" type="text" />
+        <input class="border border-bluec p-2" placeholder="To" type="text" />
+        <button
+          class="bg-bluec px-4 py-2 text-sm font-bold tracking-widest text-white"
+        >
+          SEARCH
+        </button>
+      </form>
+    </header>
+
+    <!-- _____________________________________________________________ main  _____________________________________________________________ -->
+    <main>
+      <section class="mt-48 lg:mt-40">
+        <div class="grid items-center lg:grid-cols-2">
+          <div class="relative">
+            <div
+              class="absolute -top-[20%] left-[17%] aspect-square w-1/3 bg-bluec opacity-40"
+            >
+              <div class="absolute inset-5 bg-white"></div>
+            </div>
+            <h2
+              class="relative mx-4 mb-4 text-3xl font-bold tracking-[0.2em] sm:ml-[calc(100%/3)] sm:mr-[calc(100%/6)]"
+            >
+              WELCOME TO TRAVEL
+            </h2>
+            <p
+              class="text- relative mx-4 mb-3 sm:ml-[calc(100%/3)] sm:mr-[calc(100%/6)]"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Quibusdam hic eligendi quidem ratione sit, laborum odit reiciendis
+              obcaecati repellendus accusamus dignissimos atque aut animi
+              provident maiores adipisci itaque! Error, nobis?
+            </p>
+            <button
+              class="relative mx-4 mb-10 cursor-pointer font-bold sm:ml-[calc(100%/3)] sm:mr-[calc(100%/6)]"
+            >
+              READ MORE
+            </button>
+          </div>
+          <img
+            srcset="
+              img/2-big.jpg?as=webp           690w,
+              img/2-big.jpg?as=webp&width=394 394w,
+              img/2-big.jpg?as=webp&width=530 530w
+            "
+            sizes="(max-width: 394px) 394px, 
+                   (min-width: 395px) and (max-width: 530px) 530px,
+                   (min-width:531px) and (max-width: 950px) 690px,
+                   (min-width: 951px) and (max-width: 1100px) 530px,
+                   690px"
+            src="img/2-big.jpg?as=webp"
+            alt="Seaside view"
+            class="w-full"
+          />
+        </div>
+        <div class="mx-auto mt-32 flex w-10/12 flex-wrap justify-center gap-4">
+          <div
+            class="w-full min-w-[250px] max-w-[300px] cursor-pointer bg-slate-300 duration-300 hover:scale-110 hover:bg-white hover:shadow-2xl"
+          >
+            <img
+              class="w-full"
+              src="img/2-small.jpg?as=webp"
+              alt="Seaside view"
+            />
+            <div class="grid place-items-center gap-4 p-4">
+              <h3 class="text-xs text-gray-500">LOREM</h3>
+              <p class="text-xl font-bold">Lorem ipsum dolor sit.</p>
+              <svg class="w-7 fill-bluec" viewBox="0 0 512 512">
+                <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  id="arrow-down"
+                  d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="w-full min-w-[250px] max-w-[300px] cursor-pointer bg-slate-300 duration-300 hover:scale-110 hover:bg-white hover:shadow-2xl"
+          >
+            <img
+              class="w-full"
+              src="img/2-small.jpg?as=webp"
+              alt="Seaside view"
+            />
+            <div class="grid place-items-center gap-4 p-4">
+              <h3 class="text-xs text-gray-500">LOREM</h3>
+              <p class="text-xl font-bold">Lorem ipsum dolor sit.</p>
+              <svg class="w-7 fill-bluec" viewBox="0 0 512 512">
+                <use href="#arrow-down" />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="w-full min-w-[250px] max-w-[300px] cursor-pointer bg-slate-300 duration-300 hover:scale-110 hover:bg-white hover:shadow-2xl"
+          >
+            <img
+              class="w-full"
+              src="img/2-small.jpg?as=webp"
+              alt="Seaside view"
+            />
+            <div class="grid place-items-center gap-4 p-4">
+              <h3 class="text-xs text-gray-500">LOREM</h3>
+              <p class="text-xl font-bold">Lorem ipsum dolor sit.</p>
+              <svg class="w-7 fill-bluec" viewBox="0 0 512 512">
+                <use href="#arrow-down" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- _____________________________________________________________ testimonnials _____________________________________________________________ -->
+
+      <section
+        class="splide mt-36 w-full bg-[url(img/3-testimonials-bg.jpg)] bg-cover bg-center bg-no-repeat p-16 text-center text-white"
+        aria-label="Testimonnials"
+      >
+        <h2 class="mb-8 text-2xl">Testimonials</h2>
+        <div class="splide__track mx-auto w-11/12 sm:w-2/3">
+          <ul class="splide__list">
+            <li class="splide__slide grid place-items-center gap-4">
+              <div class="aspect-square w-16 overflow-hidden rounded-full">
+                <img src="img/3-test1.png?as=webp" alt="Woman in glasses" />
+              </div>
+              <p><strong>Name</strong> Girls</p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+                quis assumenda nisi illo nam ducimus, doloribus vitae, eum
+                labore sit enim, hic sapiente repellendus consequuntur sunt
+                quasi vel fugiat! Tenetur.
+              </p>
+            </li>
+            <li class="splide__slide grid place-items-center gap-4">
+              <div class="aspect-square w-16 overflow-hidden rounded-full">
+                <img src="img/3-test1.png?as=webp" alt="Woman in glasses" />
+              </div>
+              <p><strong>Name</strong> Girls</p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+                quis assumenda nisi illo nam ducimus, doloribus vitae, eum
+                labore sit enim, hic sapiente repellendus consequuntur sunt
+                quasi vel fugiat! Tenetur.
+              </p>
+            </li>
+            <li class="splide__slide grid place-items-center gap-4">
+              <div class="aspect-square w-16 overflow-hidden rounded-full">
+                <img src="img/3-test1.png?as=webp" alt="Woman in glasses" />
+              </div>
+              <p><strong>Name</strong> Girls</p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+                quis assumenda nisi illo nam ducimus, doloribus vitae, eum
+                labore sit enim, hic sapiente repellendus consequuntur sunt
+                quasi vel fugiat! Tenetur.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section
+        class="mx-auto my-24 flex w-10/12 flex-wrap justify-center gap-4 lg:justify-between"
+      >
+        <img src="img/3-logo1.png?as=webp" alt="handmade logo" />
+        <img src="img/3-logo2.png?as=webp" alt="Mountain logo" />
+        <img src="img/3-logo3.png?as=webp" alt="Collection logo" />
+        <img src="img/3-logo4.png?as=webp" alt="Mountainbike logo" />
+        <img src="img/3-logo5.png?as=webp" alt="other logo" />
+      </section>
+    </main>
+    <footer class="w-full">
+      <div
+        class="flex flex-wrap items-center justify-center gap-8 bg-neutral-700 px-[8%] py-14 text-sm text-gray-300 lg:justify-between"
+      >
+        <div class="min-w-[200px] max-w-[250px] flex-1">
+          <p
+            class="bg-gradient-blue-to-purple w-fit bg-clip-text text-xl font-bold text-transparent"
+          >
+            TRAVEL
+          </p>
+          <p class="uppercase">Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <div class="">
+          <p class="text-white"><strong>Footer Links</strong></p>
+          <p>footer menu links</p>
+          <p>footer menu links</p>
+          <p>footer menu links</p>
+        </div>
+        <div class="">
+          <p class="text-white"><strong>Footer Links</strong></p>
+          <p>footer menu links</p>
+          <p>footer menu links</p>
+          <p>footer menu links</p>
+        </div>
+        <div class="">
+          <p class="text-white"><strong>Footer Links</strong></p>
+          <p>footer menu links</p>
+          <p>footer menu links</p>
+          <p>footer menu links</p>
+        </div>
+        <address class="not-italic">
+          <p class="text-white"><strong>Contact Us</strong></p>
+          <div class="flex gap-2">
+            <svg class="w-4 fill-bluec" viewBox="0 0 512 512">
+              <use href="#phone" />
+            </svg>
+            <a href="tel:855-5564-65651">855-5564-65651</a>
+          </div>
+          <div class="flex gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              class="w-4 fill-bluec"
+            >
+              <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                id="location-arrow"
+                d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"
+              />
+            </svg>
+            <p>Address street City</p>
+          </div>
+          <div class="flex gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="w-4 fill-bluec"
+            >
+              <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                id="envelope"
+                d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+              />
+            </svg>
+            <a href="mailto:yourmail@domain.com">yourmail@domain.com</a>
+          </div>
+        </address>
+      </div>
+
+      <div
+        class="flex flex-wrap items-center justify-center gap-4 bg-black px-[8%] py-7 text-sm text-gray-400 lg:justify-between"
+      >
+        <p>2023 &copy; Copyright FREETHEME</p>
+        <ul class="flex gap-3">
+          <li>Support</li>
+          <li>Contact Us</li>
+          <li>Disclaimer</li>
+          <li>Add More</li>
+        </ul>
+        <div class="flex h-5 gap-8">
+          <img src="img/icon-facebook-f.svg" alt="facebook icon" />
+          <img src="img/icon-behance.svg" alt="behance icon" />
+          <img src="img/icon-twitter.svg" alt="twitter icon" />
+          <img src="img/icon-instagram.svg" alt="instagram icon" />
+          <img src="img/icon-pinterest.svg" alt="pinterest icon" />
+          <img src="img/icon-dribbble.svg" alt="dribble icon" />
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

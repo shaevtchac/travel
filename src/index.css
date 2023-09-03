@@ -3,23 +3,32 @@
 @tailwind utilities;
 
 @layer base {
-  h2 {
-    @apply text-orangec font-bold text-lg text-center leading-tight;
-  }
-  h3 {
-    @apply font-bold text-center mt-3 mb-1;
-  }
-  button {
-    @apply bg-orangec text-white rounded px-6 py-2 transition-all duration-500;
-  }
-
-  button:hover {
-    @apply shadow-lg scale-110 contrast-200;
-  }
 }
 
 @layer components {
 }
 
 @layer utilities {
+  .bg-gradient-blue-to-purple {
+    @apply bg-gradient-to-r from-bluec to-purplec to-45%;
+  }
+}
+nav.menu-open > ul {
+  display: block;
+}
+nav.menu-open {
+  flex-direction: column;
+}
+
+nav.menu-open button span:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+nav.menu-open button span:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+nav.menu-open button span:nth-child(2) {
+  display: none;
+}
+nav.menu-open button {
+  margin-top: 8px;
 }

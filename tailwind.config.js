@@ -6,26 +6,20 @@ module.exports = {
     screens: {
       sm: '530px',
       md: '700px',
-      lg: '900px',
+      lg: '950px',
       xl: '1300px',
     },
 
     fontFamily: {
-      sans: ['Montserrat', 'sans-serif'],
+      roboto: ['Roboto', 'sans-serif'],
     },
     extend: {
-      spacing: {
-        128: '32rem',
-        144: '36rem',
-      },
-      borderRadius: {
-        '4xl': '2rem',
-      },
       colors: {
-        orangec: '#e9560d',
-        orangec_light: '#f3e383',
+        bluec: '#626ffe',
+        purplec: '#8e4aeb',
       },
     },
   },
+
   plugins: [],
 };
